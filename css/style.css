@@ -1,0 +1,775 @@
+
+/* GLOBAL  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    /* khong quy uoc thi 1rem=16px */
+}
+
+header
+{
+    background-color:#4e2a84;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    
+}
+
+.header__content
+{
+    width: 70%;
+    margin: 0 auto;
+
+    /* FLEX BOX  */
+    display: flex;
+    /* them khoang cach trai phai cho cac the con  */
+    justify-content: space-around ;
+    /* them khoang cach cac the con theo chieu doc */
+    align-items: center ;
+}
+
+.header__content > p
+{
+    font-size: 2.06rem;
+    
+}
+.header__content a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+
+}
+
+.header__content ul
+{
+    list-style: none;
+}
+
+.header__content li
+{
+    display: inline;
+    padding: 0 10px;
+}
+
+.header__content a:hover
+{
+    color: #ff0e83;
+}
+
+.header__content a:active
+{
+    color: #ff0e83;
+}
+
+/* CAROUSEL  */
+
+.carousel
+{
+    background-image: url(../images/b3.jpg);
+    height: 600px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.carousel__contents
+{
+    color: white;
+    text-align: center;
+    
+}
+
+.carousel__contents h4
+{
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.carousel__btn
+{
+    margin: 20px 0;
+    padding: 12px 27px;
+    border: 1px solid white;;
+    border-radius: 5px;
+    background-color: #ff0e83;
+    color: white;
+
+    cursor: pointer;
+}
+
+.carousel__btn:hover
+{
+    background-color: white;
+    color: black;
+    border: 1px solid #ff0e83;;
+    
+}
+
+/* ABOUT  */
+
+.about
+{
+    display: grid;
+
+    /* grid-template-columns: 25% 25% 25% 25%; */
+
+    /* grid-template-columns: repeat(4,25%); */
+
+    /* fr: phan so, chi dung voi grid */
+
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+.intro__ab1
+{
+    /* duong bat dau va duong ket thuc  */
+    /* grid-column: 2 / 4; */
+
+    /* duong bat dau va so cot chiem */
+    grid-column: 2 / span 2;
+}
+
+
+.intro__best
+{
+    grid-column: 1 / span 2;
+}
+.intro__ab4
+{
+    grid-column: 3 / span 2;
+}
+
+.intro__item:first-child, .intro__item:nth-child(8)
+{
+    background-color: #4e2a84;
+}
+
+.intro__item:nth-child(3)
+{
+    background-color: #ff0e83;
+}
+
+.intro__item:nth-child(4)
+{
+    background-color: #ed6498;
+}
+
+.intro__item:nth-child(6)
+{
+    background-color: #836eaa;
+}
+
+.intro__item img
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.intro__item h3
+{
+    color: #fff;
+    font-size: 24px
+}
+
+.intro__item p
+{
+    color: #c1c1c1;
+    font-size: 14px;
+    margin: 0 20px;
+    letter-spacing: 1px;
+    line-height: 25px;
+
+}
+.intro__item
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+/* NUMBER  */
+.number
+{
+    padding: 70px 0;
+}
+.number__content
+{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.number__item
+{
+    width: 25%;
+}
+
+.number__item p:first-child
+{
+    color: #4e2a84;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.number__item p:last-child
+{
+    font-size: 20px;
+    padding: 20px 0;
+    font-weight: bold;
+    letter-spacing: 3px;
+    
+}
+
+/* SERVICE  */
+
+.service
+{
+    background-image: url(../images/s1.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.service > h2
+{
+    font-size: 45px;
+    color: white;
+    padding-bottom: 40px;
+}
+.servive__content
+{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.service__item
+{
+    padding: 0 10px;
+}
+
+.service__item i
+{
+    font-size: 3rem;
+    color: #4e2a84;
+
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #4e2a84;
+
+    border-radius: 50%;
+    /* Can giua theo chieu doc  */
+    /* giup can giua khi text chi co mot hang chu  */
+    line-height: 100px;
+
+    /* transition-property: color;
+    transition-duration: 1s; */
+    transition: all 0.5s;
+}
+
+.service__item p
+{
+    padding:10px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.service__item h3
+{
+    padding-top: 14px;
+}
+.service__item button
+{
+    padding: 12px 27px;
+    border: 2px solid white;;
+    border-radius: 5px;
+    background-color: #ff0e83;
+    color: white;
+
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.service__item button:hover
+{
+    background-color: white;
+    color: black;
+    border: 2px solid #ff0e83;;
+    
+}
+
+.service__item:hover i
+{
+   color: #ff0e83;
+}
+
+
+/* GALLERY  */
+
+.gallery > h2
+{
+    text-align: center;
+    padding: 40px 0;
+    font-size: 45px;
+}
+.gallery__content
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    padding: 0 15px;
+}
+
+.gallery__item:first-child
+{
+    grid-column: 1 / span 2;
+}
+
+.gallery__item:last-child
+{
+    grid-column: 3 / span 2;
+}
+
+.gallery__item  img
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.gallery__item
+{
+    position: relative;
+}
+
+
+
+.gallery__overplay
+{
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 132, 163, 0.2);
+    color: white;
+    padding: 40px 30px;
+
+    
+
+}
+.gallery__overplay  p
+{
+    font-size: 14px;
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    letter-spacing: 1px;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all 0.5s;
+    
+}
+
+.gallery__overplay:hover p
+{
+    opacity: 100;
+    transform: translateY(0px);
+}
+
+.gallery__overplay  h3
+{
+    font-size: 27px;
+    font-weight: 300;
+    /* vi tri chua hover  */
+    transform: translateY(20px);
+    transition: all 0.5s;
+}
+
+.gallery__overplay:hover h3
+{
+    /* vi tri da hover  */
+    transform: translateY(0);
+    
+}
+.gallery__overplay  h3  span
+{
+    font-weight: 800;
+}
+
+.gallery__overplay h3::after
+{
+    content:'';
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    display: block;
+    margin-top: 15px;
+    transform: translateY(50px);
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+.gallery__overplay:hover h3::after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+
+
+/* BAKE TEAM  */
+.team
+{
+    background-color: #4e2a84;
+    margin: 80px 0;
+    padding: 70px 0;
+}
+.team h2, .feedback h2
+{
+    font-size: 45px;
+    padding-bottom: 50px;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    
+}
+.team__content
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px 30px;
+    width: 88%;
+    margin: 0 auto;
+    
+}
+
+.team__item img
+{
+    height: 100%;
+    width: 100%;
+    display: block;
+
+}
+
+.team__item 
+{
+    position: relative;
+}
+
+.team__info
+{
+    position: absolute;
+    text-align: left;
+    bottom: 0;
+    padding: 23px;
+    background-color: #ff0e83;
+    width: 100%;
+    color: white;
+    transition: all 1s;
+    opacity: 1;
+}
+
+.team__info h3
+{
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.team__info p
+{
+    font-size: 14px;
+    
+    
+}
+
+.team__item:hover .team__info
+{
+    opacity: 0;
+}
+
+.team__info__black
+{
+    position: absolute;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s;
+    
+}
+
+.team__text
+{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    padding: 0 40px;
+    line-height: 30px;
+    font-size: 1rem;
+}
+
+.team__text h3
+{
+    color: #ff0e83;
+    padding: 10px 0;
+
+}
+
+.team__text p
+{
+    font-size: 14px;
+}
+
+
+
+.team__item:hover .team__info__black
+{
+    opacity: 1;
+}
+.team__item2{
+    overflow: hidden;
+}
+.team__item2 .team__info__black
+{
+    
+    transform: translateX(-100%);
+}
+
+.team__item2:hover .team__info__black
+{
+    
+    transform: translate(0);
+}
+
+.team__item3 .team__info__black
+{
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.team__item3:hover .team__info__black
+{
+    transform: rotate(360deg);
+}
+
+
+.team__item4 .team__info__black
+{
+    opacity: 1;
+    transform: scale(0);
+}
+
+.team__item4:hover .team__info__black
+{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* FEEDBACK  */
+.item i
+{
+    color:#2cbeff;
+    font-size: 21px;
+}
+
+.item p:first-child
+{
+    font-size: 21px;
+}
+
+.feedback
+{
+    background-image: url(../images/cc1.jpg);
+    background-size: cover;
+
+}
+
+.feedback__content
+{
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid #ff0e83;
+    text-align: center;
+    padding: 30px 70px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* .owl-dot
+{
+    overflow: hidden;
+} */
+
+
+/* CONTACT  */
+
+.contact
+{
+    padding: 50px 0;
+}
+.contact h2
+{
+    font-size: 45px;
+    padding-bottom: 50px;
+    color: black;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.contact__form form
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 85%;
+    margin: 0 auto;
+    gap: 20px 30px;
+}
+
+.contact__form textarea
+{
+    grid-column: 1 / span 2;
+    border-radius: 0%;
+    border: 1px solid black;
+    padding: 1em;
+    resize: none;
+   
+}
+
+.contact__form input
+{
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 1em;
+    transition: all 0.5s;
+}
+.contact__form button
+{
+    grid-column: 1 / span 2;
+    padding: .7em 3em;
+    background-color: #ff0e83;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    border: #ff0e83;
+    transition: all 0.5s;
+    
+}
+
+
+.contact__form button:hover
+{
+    background-color: black;
+    color: white;
+}
+
+.contact__form input:focus
+{
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.contact__form textarea::placeholder
+{
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact__form textarea:focus
+{
+    outline: none;
+}
+
+.contact__map iframe
+{
+    width: 100%;
+    padding: 50px 10px;
+}
+
+/* BACK TO TOP  */
+
+.backToTop
+{
+    width: 80px;
+    height: 80px;
+    border: 2px solid blue;
+    color: blue;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 78px;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+/* class cua thu vien giup an hien the  */
+.cd-top--is-visible { 
+    visibility: visible;
+    opacity: 1;
+  }
+  
+/* Khai bao 1 chu ky chuyen dong  */
+@keyframes upDown
+{
+    /* 0% -> 100%  */
+    0%{
+
+    }
+    25%{
+        transform: translateY(-50px) scale(1.2);
+    }
+    50%
+    {
+        transform: translateY(0) scale(1);
+    }
+    75%
+    {
+        transform: translateY(50px) scale(1.2);
+    }
+    100%
+    {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.carousel__contents h4
+{
+   
+    animation: upDown 5s linear 0s infinite;
+}
